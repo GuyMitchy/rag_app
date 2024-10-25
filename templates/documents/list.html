@@ -1,7 +1,10 @@
 <h2>Your Documents</h2>
    <ul>
    {% for document in documents %}
-       <li>{{ document.title }} - Uploaded on {{ document.created_at }}</li>
+       <li>
+           {{ document.title }} - Uploaded on {{ document.created_at }}
+           <a href="{% url 'ask_question' document.id %}">Ask Questions</a>
+       </li>
    {% empty %}
        <li>No documents uploaded yet.</li>
    {% endfor %}
