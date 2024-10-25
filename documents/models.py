@@ -16,6 +16,11 @@ class Document(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     processed = models.BooleanField(default=False)
     vectorstore_data = models.TextField(null=True, blank=True)
+    file_type = models.CharField(max_length=10, choices=[
+        ('pdf', 'PDF'),
+        ('txt', 'Text'),
+        ('md', 'Markdown')
+    ], null=True, blank=True)  # Make it optional
 
     def __str__(self):
         return self.title
@@ -40,3 +45,8 @@ class Document(models.Model):
                 allow_dangerous_deserialization=True  # Add this line
             )
         return None
+
+    def save(self, *args, **kwargs):
+        if not self.id and not self.file_type:  # Only set file_type on creation if not already set
+            self.file_type = self.file.name.split('.')[-1].lower()
+        super().save(*args, **kwargs)

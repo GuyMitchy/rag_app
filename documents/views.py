@@ -8,6 +8,7 @@ import traceback
 import chardet
 from pypdf import PdfReader
 import io
+import markdown
 
 # Create your views here.
 
@@ -19,11 +20,18 @@ def upload_document(request):
             document = form.save(commit=False)
             document.user = request.user
             
-            # Extract text from PDF
-            pdf_reader = PdfReader(io.BytesIO(document.file.read()))
-            text_content = ""
-            for page in pdf_reader.pages:
-                text_content += page.extract_text() + "\n"
+            file_content = document.file.read()
+            file_extension = document.file.name.split('.')[-1].lower()
+            
+            if file_extension == 'pdf':
+                text_content = extract_text_from_pdf(file_content)
+            elif file_extension in ['txt', 'md']:
+                text_content = file_content.decode('utf-8')
+                if file_extension == 'md':
+                    text_content = markdown.markdown(text_content)
+            else:
+                messages.error(request, "Unsupported file type. Please upload a PDF, TXT, or MD file.")
+                return redirect('upload_document')
             
             document.content = text_content
             document.save()
@@ -43,9 +51,16 @@ def upload_document(request):
         form = DocumentForm()
     return render(request, 'documents/upload.html', {'form': form})
 
+def extract_text_from_pdf(file_content):
+    pdf_reader = PdfReader(io.BytesIO(file_content))
+    text_content = ""
+    for page in pdf_reader.pages:
+        text_content += page.extract_text() + "\n"
+    return text_content
+
 @login_required
 def document_list(request):
-    documents = Document.objects.filter(user=request.user)
+    documents = Document.objects.filter(user=request.user).order_by('-created_at')
     return render(request, 'documents/list.html', {'documents': documents})
 
 def home(request):
