@@ -1,0 +1,9 @@
+<h2>Your Documents</h2>
+   <ul>
+   {% for document in documents %}
+       <li>{{ document.title }} - Uploaded on {{ document.created_at }}</li>
+   {% empty %}
+       <li>No documents uploaded yet.</li>
+   {% endfor %}
+   </ul>
+   <a href="{% url 'upload_document' %}">Upload New Document</a>

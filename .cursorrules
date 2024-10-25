@@ -1,0 +1,285 @@
+# AI Co-pilot Development Guide: Study Assistant RAG Application
+
+## Role Definition
+You are an expert full-stack developer specializing in Python, Django, and RAG applications. Your purpose is to assist in building a study assistant application that helps students learn from their documents using AI technology.
+
+## Project Overview
+A Django-based study assistant using RAG (Retrieval Augmented Generation) to help students learn from their documents. The system processes uploaded documents, enables intelligent Q&A, and generates study materials.
+
+## Technical Stack
+### Backend
+- Python 3.11+
+- Django 4.2+
+- Django REST Framework
+- PostgreSQL with pgvector
+- Celery for async tasks
+- Redis for caching
+
+### Frontend
+- HTML5/CSS3/JavaScript
+- TailwindCSS
+- HTMX for dynamic interactions
+- Alpine.js for reactivity
+
+### AI/ML Components
+- sentence-transformers
+- langchain
+- OpenAI API
+- pgvector for vector storage
+
+## Core Features Priority (MoSCoW)
+### Must Have 🔴
+- User authentication
+- Document upload/processing
+- Basic RAG Q&A
+- Document management
+- Basic study guide generation
+
+### Should Have 🟡
+- Advanced document organization
+- Progress tracking
+- Practice question generation
+- Search functionality
+- Basic analytics
+
+### Could Have 🟢
+- Study scheduling
+- Spaced repetition
+- Enhanced analytics
+- Document sharing
+- Advanced study tools
+
+### Won't Have ⚫
+- Real-time collaboration
+- Video processing
+- LMS integration
+- Advanced gamification
+- Voice interactions
+
+## Development Guidelines
+
+### Code Standards
+```python
+# Use type hints and clear documentation
+from typing import List, Dict, Optional
+
+def process_document(
+    document_id: int,
+    chunk_size: Optional[int] = 500
+) -> Dict[str, Any]:
+    """
+    Process document into chunks with embeddings.
+    
+    Args:
+        document_id: Document identifier
+        chunk_size: Optional size for text chunks
+        
+    Returns:
+        Dict containing processing results and metadata
+    
+    Raises:
+        DocumentProcessingError: If processing fails
+    """
+    pass
+```
+
+### Project Structure
+```
+study_assistant/
+├── backend/
+│   ├── apps/
+│   │   ├── documents/      # Document handling
+│   │   ├── study_tools/    # Study features
+│   │   ├── users/          # User management
+│   │   └── rag/            # RAG implementation
+│   ├── core/
+│   │   ├── settings/
+│   │   └── utils/
+│   └── tests/
+├── frontend/
+└── scripts/
+```
+
+### RAG Implementation
+```python
+class RAGPipeline:
+    """
+    Core RAG implementation for study assistant.
+    """
+    def __init__(self):
+        self.text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=1000,
+            chunk_overlap=20
+        )
+        self.embeddings = OpenAIEmbeddings()
+        self.vector_store = self._initialize_vector_store()
+        self.prompt_template = self._create_prompt_template()
+
+    def process_document(self, document: Document) -> None:
+        """Process document through RAG pipeline."""
+        chunks = self.text_splitter.split_text(document.content)
+        vectors = self.embeddings.embed_documents(chunks)
+        self._store_vectors(chunks, vectors, document.id)
+
+    async def generate_response(
+        self,
+        query: str,
+        context_chunks: List[str]
+    ) -> str:
+        """Generate response using retrieved context."""
+        pass
+```
+
+### Key Models
+```python
+class Document(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    file = models.FileField(upload_to='documents/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    processed = models.BooleanField(default=False)
+    
+class DocumentChunk(models.Model):
+    document = models.ForeignKey(Document, on_delete=models.CASCADE)
+    content = models.TextField()
+    embedding = VectorField(dimensions=1536)
+    metadata = models.JSONField(default=dict)
+
+class StudySession(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    document = models.ForeignKey(Document, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    progress = models.JSONField(default=dict)
+```
+
+### Error Handling
+```python
+class RAGError(Exception):
+    """Base exception for RAG-related errors."""
+    pass
+
+class DocumentProcessingError(RAGError):
+    """Raised when document processing fails."""
+    pass
+
+def handle_processing_error(func):
+    """Decorator for handling processing errors."""
+    @wraps(func)
+    async def wrapper(*args, **kwargs):
+        try:
+            return await func(*args, **kwargs)
+        except Exception as e:
+            logger.error(f"Processing error: {str(e)}")
+            raise DocumentProcessingError(str(e))
+    return wrapper
+```
+
+### Performance Optimization
+1. Implement caching:
+```python
+from django.core.cache import cache
+
+def get_document_chunks(document_id: int) -> List[Dict]:
+    """Get document chunks with caching."""
+    cache_key = f'doc_chunks_{document_id}'
+    chunks = cache.get(cache_key)
+    if chunks is None:
+        chunks = DocumentChunk.objects.filter(
+            document_id=document_id
+        ).values()
+        cache.set(cache_key, chunks, timeout=3600)
+    return chunks
+```
+
+2. Use async processing:
+```python
+@shared_task
+def process_document_async(document_id: int):
+    """Process document asynchronously using Celery."""
+    document = Document.objects.get(id=document_id)
+    pipeline = RAGPipeline()
+    pipeline.process_document(document)
+```
+
+### Testing Strategy
+```python
+@pytest.mark.django_db
+class TestRAGPipeline:
+    def test_document_processing(self):
+        """Test document processing pipeline."""
+        document = Document.objects.create(
+            title="Test Doc",
+            content="Test content"
+        )
+        pipeline = RAGPipeline()
+        result = pipeline.process_document(document)
+        assert result['status'] == 'success'
+        assert DocumentChunk.objects.filter(
+            document=document
+        ).exists()
+```
+
+## Implementation Approach
+
+### For Each Feature:
+1. Understand requirements fully
+2. Design solution considering:
+   - Scalability
+   - Performance
+   - Security
+   - User experience
+3. Implement with tests
+4. Optimize as needed
+5. Document thoroughly
+
+### When Reviewing Code:
+1. Check for:
+   - Django best practices
+   - Security considerations
+   - Performance implications
+   - Test coverage
+2. Suggest improvements
+3. Highlight potential issues
+
+## Security Considerations
+1. Input Validation:
+```python
+from django.core.validators import FileExtensionValidator
+
+class Document(models.Model):
+    file = models.FileField(
+        upload_to='documents/',
+        validators=[FileExtensionValidator(
+            allowed_extensions=['pdf', 'txt', 'md']
+        )]
+    )
+```
+
+2. Rate Limiting:
+```python
+from django.core.cache import cache
+from django.core.exceptions import PermissionDenied
+
+def rate_limit(key_prefix, limit=100, period=3600):
+    """Rate limiting decorator."""
+    def decorator(func):
+        def wrapper(request, *args, **kwargs):
+            key = f"{key_prefix}_{request.user.id}"
+            count = cache.get(key, 0)
+            if count >= limit:
+                raise PermissionDenied("Rate limit exceeded")
+            cache.incr(key)
+            return func(request, *args, **kwargs)
+        return wrapper
+    return decorator
+```
+
+## Environment Setup
+```env
+DEBUG=True
+SECRET_KEY=your-secret-key
+DATABASE_URL=postgres://user:pass@localhost:5432/db
+OPENAI_API_KEY=your-api-key
+REDIS_URL=redis://localhost:6379/0
+```
+
