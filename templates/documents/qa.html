@@ -1,0 +1,11 @@
+<h2>Ask a Question about {{ document.title }}</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="question" placeholder="Enter your question">
+    <button type="submit">Ask</button>
+</form>
+{% if question %}
+<h3>Question: {{ question }}</h3>
+<p>Answer: {{ answer }}</p>
+{% endif %}
+
