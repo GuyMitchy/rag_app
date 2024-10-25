@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive UX/UI Development Guide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.0/mermaid.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; }
+        #chart-container { margin-top: 20px; }
+        .back-button { display: none; margin-top: 20px; padding: 10px 20px; background-color: #3498db; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Interactive UX/UI Development Guide</h1>
+    <div id="chart-container"></div>
+    <button id="backButton" class="back-button">Back to Main Chart</button>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+
+        const mainChart = `
+        graph LR
+            A[Start: Project Initiation] --> B
+            subgraph B[Strategy Plane]
+                B1[User Needs]
+                B2[Business Objectives]
+            end
+            B --> C
+            subgraph C[Scope Plane]
+                C1[Functional Specifications]
+                C2[Content Requirements]
+            end
+            C --> D
+            subgraph D[Structure Plane]
+                D1[Information Architecture]
+                D2[Interaction Design]
+            end
+            D --> E
+            subgraph E[Skeleton Plane]
+                E1[Wireframes]
+                E2[Navigation Design]
+                E3[Information Design]
+            end
+            E --> F
+            subgraph F[Surface Plane]
+                F1[Visual Design]
+                F2[Style Guide]
+            end
+            F --> G[Final Website]
+            G --> H[User Testing]
+            H -->|Iterate| B
+
+            click B call clickPlane('strategy')
+            click C call clickPlane('scope')
+            click D call clickPlane('structure')
+            click E call clickPlane('skeleton')
+            click F call clickPlane('surface')
+
+            style A fill:#f9f,stroke:#333,stroke-width:2px
+            style G fill:#bfb,stroke:#333,stroke-width:2px
+        `;
+
+        const planeCharts = {
+            strategy: `
+            graph TD
+                A[Strategy Plane] --> B[User Needs]
+                A --> C[Business Objectives]
+                B --> D[User Research]
+                D --> D1[Surveys]
+                D --> D2[Interviews]
+                D --> D3[Analytics Review]
+                B --> E[Personas]
+                E --> E1[Demographic Info]
+                E --> E2[Goals and Pain Points]
+                E --> E3[Behaviors]
+                C --> F[Project Goals]
+                F --> F1[Define KPIs]
+                F --> F2[Set Timelines]
+                C --> G[Success Metrics]
+                G --> G1[Conversion Rates]
+                G --> G2[User Engagement]
+                G --> G3[Customer Satisfaction]
+            `,
+            scope: `
+            graph TD
+                A[Scope Plane] --> B[Functional Specifications]
+                A --> C[Content Requirements]
+                B --> D[Feature List]
+                D --> D1[Core Features]
+                D --> D2[Nice-to-have Features]
+                B --> E[Technical Requirements]
+                E --> E1[Platform Selection]
+                E --> E2[Integration Needs]
+                E --> E3[Performance Requirements]
+                C --> F[Content Audit]
+                F --> F1[Existing Content Review]
+                F --> F2[Gap Analysis]
+                C --> G[Content Strategy]
+                G --> G1[Content Types]
+                G --> G2[Content Creation Plan]
+                G --> G3[Content Governance]
+            `,
+            structure: `
+            graph TD
+                A[Structure Plane] --> B[Information Architecture]
+                A --> C[Interaction Design]
+                B --> D[Site Map]
+                D --> D1[Page Hierarchy]
+                D --> D2[Content Grouping]
+                B --> E[Content Organization]
+                E --> E1[Taxonomies]
+                E --> E2[Metadata Strategy]
+                C --> F[User Behaviors]
+                F --> F1[Task Flows]
+                F --> F2[Use Cases]
+                C --> G[Feedback Mechanisms]
+                G --> G1[System Responses]
+                G --> G2[Error Handling]
+                G --> G3[Confirmation Messages]
+            `,
+            skeleton: `
+            graph TD
+                A[Skeleton Plane] --> B[Wireframes]
+                A --> C[Navigation Design]
+                A --> D[Information Design]
+                B --> E[Page Layouts]
+                E --> E1[Content Blocks]
+                E --> E2[Functionality Placement]
+                B --> F[Content Placement]
+                F --> F1[Priority Content]
+                F --> F2[Secondary Content]
+                C --> G[Menu Structures]
+                G --> G1[Main Navigation]
+                G --> G2[Footer Navigation]
+                C --> H[User Flows]
+                H --> H1[Primary Paths]
+                H --> H2[Alternative Paths]
+                D --> I[Content Hierarchy]
+                I --> I1[Visual Hierarchy]
+                I --> I2[Information Grouping]
+                D --> J[Data Visualization]
+                J --> J1[Charts and Graphs]
+                J --> J2[Infographics]
+            `,
+            surface: `
+            graph TD
+                A[Surface Plane] --> B[Visual Design]
+                A --> C[Style Guide]
+                B --> D[Color Scheme]
+                D --> D1[Primary Colors]
+                D --> D2[Secondary Colors]
+                D --> D3[Accent Colors]
+                B --> E[Typography]
+                E --> E1[Font Selection]
+                E --> E2[Text Hierarchy]
+                B --> F[Images and Icons]
+                F --> F1[Image Style]
+                F --> F2[Icon Design]
+                C --> G[Design Patterns]
+                G --> G1[UI Components]
+                G --> G2[Layout Templates]
+                C --> H[Brand Guidelines]
+                H --> H1[Logo Usage]
+                H --> H2[Brand Voice]
+                H --> H3[Visual Style]
+            `
+        };
+
+        function renderChart(chart) {
+            const container = document.getElementById('chart-container');
+            container.innerHTML = `<div class="mermaid">${chart}</div>`;
+            mermaid.init(undefined, container);
+        }
+
+        function clickPlane(plane) {
+            renderChart(planeCharts[plane]);
+            document.getElementById('backButton').style.display = 'block';
+        }
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            renderChart(mainChart);
+            this.style.display = 'none';
+        });
+
+        // Initial render of main chart
+        renderChart(mainChart);
+    </script>
+</body>
+</html>

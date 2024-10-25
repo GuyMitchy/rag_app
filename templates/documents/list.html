@@ -1,12 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Document List{% endblock %}
+
+{% block content %}
 <h2>Your Documents</h2>
-   <ul>
-   {% for document in documents %}
-       <li>
-           {{ document.title }} - Uploaded on {{ document.created_at }}
-           <a href="{% url 'ask_question' document.id %}">Ask Questions</a>
-       </li>
-   {% empty %}
-       <li>No documents uploaded yet.</li>
-   {% endfor %}
-   </ul>
-   <a href="{% url 'upload_document' %}">Upload New Document</a>
+<ul>
+{% for document in documents %}
+    <li>
+        {{ document.title }} - Uploaded on {{ document.created_at }}
+        <a href="{% url 'document_qa' document.id %}">Ask Questions</a>
+    </li>
+{% empty %}
+    <li>No documents uploaded yet.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'upload_document' %}">Upload New Document</a>
+{% endblock %}

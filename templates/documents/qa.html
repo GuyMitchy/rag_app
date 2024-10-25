@@ -1,11 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Q&A for {{ document.title }}{% endblock %}
+
+{% block content %}
 <h2>Ask a Question about {{ document.title }}</h2>
 <form method="post">
     {% csrf_token %}
     <input type="text" name="question" placeholder="Enter your question">
     <button type="submit">Ask</button>
 </form>
+
 {% if question %}
-<h3>Question: {{ question }}</h3>
-<p>Answer: {{ answer }}</p>
+    <h3>Question: {{ question }}</h3>
+    <p>Answer: {{ answer }}</p>
+    {% if sources %}
+        <h4>Sources:</h4>
+        <ul>
+        {% for source in sources %}
+            <li>{{ source }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 {% endif %}
 
+<a href="{% url 'document_list' %}">Back to Document List</a>
+{% endblock %}
