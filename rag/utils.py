@@ -10,7 +10,7 @@ class RAGPipeline:
         self.embeddings = OpenAIEmbeddings(openai_api_key=settings.OPENAI_API_KEY)
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1000,
-            chunk_overlap=200,
+            chunk_overlap=50,
             length_function=len,
             separators=["\n\n", "\n", ". ", " ", ""]
         )
@@ -23,7 +23,7 @@ class RAGPipeline:
 
     def answer_question(self, document, question):
         vectorstore = self.process_document(document)
-        relevant_docs = vectorstore.similarity_search(question, k=5)
+        relevant_docs = vectorstore.similarity_search(question, k=10)
 
         if not self._check_relevance(question, relevant_docs):
             return {

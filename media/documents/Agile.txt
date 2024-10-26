@@ -1,0 +1,978 @@
+Introduction to User Stories.
+Previously, you explored the Agile roles  typically used in Agile Software Development
+to increase the chances of project success. Up till now we have looked at Agile values and principles.
+It was stated that they  are intentionally not prescriptive.
+They serve as useful guidance for those  aiming to practise Agile development.
+As a result of applying these values  and principles to software development
+projects of a different nature and complexity,  many Agile practices and frameworks evolved.
+We will now look at these practices.
+In this video, we’ll explore one of the  core components of Agile; the User Story.
+A user story is a small, self-contained unit of  development work designed to accomplish a specific
+goal within a product. Next, we’ll discuss why  the user story is a crucial component in Agile.
+First, an ideal user story is usually  written from the user’s perspective.
+Its purpose is to articulate how a software  feature will provide value to the user.
+Thus, it is expected that the users  or product owners write the user stories.
+As well as this, user stories ensure a  user-focused framework for daily work.
+They drive collaboration, creativity and produce  better overall results. We’ll discuss this
+in greater detail in the coming videos. Third, the user story constitutes the
+smallest unit of work in Agile. We build complete  functionality in increments of user stories.
+User stories should be prioritised and assigned to  iterations in agreement with the development team.
+Thus, the user story should be created  as a bite-sized deliverable, which the
+development team can finish in a single iteration. It's tempting to think that user stories are equal
+to requirements in Waterfall. However,  there are a number of key differences.
+With the Waterfall model, requirements describe  how a particular feature should be implemented,
+whereas the user story focuses on describing  the value expected from such a feature.
+Also, in a Waterfall, all implementation  details are listed early in the project,
+while in Agile, the development team  finalises the implementation details
+once the user story is due to be implemented.
+One last important difference is that in  Agile, the details of implementation are
+decided upon by the development team based on the  discussion with the product owner or customer.
+While in the Waterfall, the development team is  rarely involved in talks with the customer.
+It’s also worth noting that we refer to large  items that cannot fit into a single iteration,
+but can be broken into user stories as Epics.
+Epics should be decomposed into stories  before they are prioritised and implemented.
+For example, implementing a sign-in feature is  actually an Epic, not a user story.
+It could, for example, be decomposed into multiple stories such  as one for, sign-in with username and password,
+another for sign-in with Facebook, and yet another  story for “Forgot password” functionality, and so on.
+The theme provides a convenient way  to indicate that a set of related
+epics have something in common, such  as being in the same functional area.
+For example, the sign-in epic is part  of the “Account management” theme,
+which includes other epics for “user  profile”, “sign-in”, and “sign-up”.
+These larger structures ensure that  the development team’s day-to-day
+work contributes to the business  goals built into epics and themes.
+In this video, you learned what the user story is
+and why it is considered  a core component in Agile.
+In the following videos, you will learn  how to create an effective user story.
+However, before you proceed, do you consider the  following as a good example for a user story?
+As a user, I want to add a personal  photo to my profile page.
+Why might this be a good example?
+Why might it not be one?
+
+Start of transcript. Skip to the end.
+User Story Templating.
+Previously, you learned about User Stories and  their importance as a core component in Agile
+to articulate how a software feature  will provide value to the customer.
+In this video, you’ll learn how  to write an effective user story
+in readiness for the development  team to start work on implementation.
+It’s important to note when you write  a User Story, you should express it in
+a few sentences in simple language  that outlines the desired outcome.
+After reading the User Story, anyone on  either the customer or the development
+team side should understand the specific user  problems we are hoping to solve with the story,
+and what value is created for the customer.
+Also, you should not include any technical  jargon or technical details in the User Story.
+The customer does not need to know how the  development team will code that solution.
+Over time, many standard templates  evolved to represent stories such as:
+As a <role> I can <capability>,  so that <receive benefit>,
+or In order to <receive benefit>  as a <role>, I can <goal/desire>.
+Ofcourse in this case, role, capability, receive/benefit, goal/desire are all placeholders
+for the actual User Stories that your user wants to implement.
+For example, suppose you are  working on an e-commerce website,
+the following could be possible User Stories.
+As a warehouse employee, I can select  the paper size on which to print
+so that the printed label  size matches the parcel size.
+Or, in order to check-out multiple items in one click,  as a user, I can add items to a shopping cart.
+As you might have noticed from these examples,  User Stories are easy to understand for everyone
+and are usually small enough to fit  on an index card or post-it note.
+Once the user story has been created,  based on the value presented,
+they are then prioritized for development. When the story is due for development.
+The development team then discusses the User  Story with the customer or the product owner
+to articulate what should be done in more  detail using a technique called the 3 C’s;
+Card, Conversation and Confirmation.
+The Three C's guide all parties through  the progressive elaboration of the story
+under consideration, from a brief  statement to a fully developed User Story.
+Let’s illustrate how it works:
+First, the customer or the product owner reads  a brief story from the Card, for example,
+“As a warehouse employee, I can select  the paper size on which to print
+so that the printed label  size matches the parcel size.”
+Second, a Conversation begins to  detail the requirements needed.
+This conversation allows the development  team to ask questions to ensure they
+clearly understand what’s being asked for  and the value being provided. For example:
+What details should be included in the print-out? What are the various paper sizes?
+Should we show a “preview”  version before printing?
+As you may have noticed, in  contrast to the Waterfall,
+requirements evolve from this process,  as a result of this 2-way discussion.
+In Agile, all parties converse to  clarify the details collaboratively.
+Finally, the development team needs to  confirm that they understand the User Story.
+They also need to get confirmation from the  customer regarding the acceptance criteria
+of the User Story. We’ll discuss these  acceptance criteria more in the next video.
+For now, though, the development  team has all the details to
+proceed with the User Story implementation. In this video, you learned how to create a
+User Story based on standard templates, and how  to use the 3Cs to collaborate with a customer
+or product owner to evolve a User Story from a  brief statement to a fully developed User Story.
+In the next video, you’ll explore Github Issues, which is a feature we’ll use to create User Stories.
+Before you continue to the next video, why do we agree on acceptance criteria with the User?
+Can you come up with  acceptance criteria for our sample User Story?
+Take a moment to note some of your ideas  before we proceed to the next video.
+
+
+Start of transcript. Skip to the end.
+Introduction to issues on Github.
+In the previous lesson, you learned about user story templating, and the process to
+evolve the story from a brief statement to a fully developed story.
+In this video, you’ll explore Github’s Issues, which we will use to write, arrange
+and store our user stories.
+Before we start, it’s worth mentioning that while the Github issues module is not built
+explicitly for user stories management, as it was originally intended as a shared discussion
+platform for a software development team, its features; such as title, description,
+labels, milestone assignees and comments are well-suited for the task of user story management.
+Therefore, it’s important to note that while the terminology used might not entirely be
+aligned with what you’ve learned about Agile so far, their use is the same.
+So, knowing this, let’s get started.
+First, we’ll create a new GitHub repository.
+I’ll call mine ‘First Agile Project”.
+We'll just press the Create Repository button.
+Once the repository is  created, in the repository’s
+main menu bar, click on “Issues”,
+as you'll see it's empty because we have no “issues” yet.
+Now, on the top right-hand side, we click on “new issue”.
+And you’ll get a straightforward form with the “Title” and the “Description” fields.
+So we're going to add a “Title” and “Description”. So we're going to add in a User Story here.
+We'll call it “Select order print-out paper size”,
+This is the User Story that we are dealing with.
+And in the description, we'll actually write the User Story.
+This is the same User Story as we've had before.
+So as a warehouse employee I can select the
+paper size while printing the order details so that I can attach it to different parcel sizes.
+Note that you can also use basic styling from the list on the top of the “Description” field.
+And you can preview it using the “Preview” tab.
+So I'm just going to highlight Icon here and make it bold.
+And when we click on preview, we see that's the case.
+We're going to submit this "New Issue".
+And we've created our first User Story, and we can see the details of it.
+So we only have one story created, at the moment in our Issues list,
+but if we had multiples we could filter them.
+In this video, you learned about Github Issues and how to use them to create a User Story.
+In the next video, we'll create a User Story template on Github and commit that change.
+
+
+Start of transcript. Skip to the end.
+User Story Templates on Github.
+Previously, you learned about creating user stories and emphasising the value delivered
+to software solution users.
+In this lesson, you’ll first create a user story template on Github, next we’ll commit
+this change before finally reusing our story template to create multiple user stories.
+To do this, click on settings on the main bar.
+And scroll down until you get to “Features” heading, and inside “Issues” click on “Set up templates.”
+After the page loads, click on “Add a template” and choose “Custom Template.”
+Your template will appear on top of the page; so click on “Preview and Edit”.
+And then the small pencil icon and that allows you to edit it.
+We will call this template “User Story” and add “This is our default user story template" to the About box.
+Now in the template content, let’s use this as our default template.
+You might want to use some markdown. For example, the “**” allow this to be bold.
+For more information on how to style your template using Markdown, simply click the
+Styling with Markdown button.
+As you can see it says, "styling with Markdown is supported".
+For now though we’ll also add “User Story:” title as the “issue default title.”
+Now, that we've created our template, we just click on the small 'x' to go back to preview mode.
+You’re now done creating the template.
+There is still one step we have to do before we can use it.
+In Github, templates are stored as files, and they become part of your repository.
+Thus, it's really important to always make sure to “Commit” the changes so that the
+file containing the template details will become part of your code repository.
+To do that, click on “Propose” changes on the top corner of the screen.
+You’ll be requested to add a commit message, just like any other regular commit you might do with code.
+So, I’ll add in “Add a new user story template” as our commit message,
+and we're committing directly to the main branch here, so just click “Commit changes”.
+You're now redirected to the repository view.
+You'll notice there's a new folder there named, ".github" it's a hidden folder.
+And you're commit comment is next to it. If we open that folder you'll find the file, this is the
+markdown file which contains your User Story.
+So now that we have this template created, let's use it.
+Go back to Issues and click on "New Issue".
+You'll see our template is there, so we can just click "Get Started".
+It's the same standard view as before, but now pre-populated based on their template.
+So we're going to replace the role with our warehouse employee from our sample user story.
+Capability will replace with "select paper size on which to print".
+And we'll replace the received benefit with the "printed label size matches the parcel size".
+And for the title, we'll give it “Matching label size with paper size.”
+So we can click on “preview” to see how it would look. Before the user story is rendered.
+And we can see the items are bolded there with a markdown.
+Now we're going to “Submit new issue.”
+So we now have a user story created using our new template.
+If we click on the Issues tab, we can see now that there are two stories there.
+This new story is created with our template.
+In this video, you learned how to create, commit and use a User Story Template in GitHub.
+Github Issues has additional capabilities above what we’ve already explored, such as: opening an issue from code,
+pinning important issues and more. We’ll explore some of them in the upcoming few videos.
+Before you proceed to the next video, take a look at the following unit’s challenge
+to ensure that you add more user stories as we might use them later.
+
+
+Start of transcript. Skip to the end.
+User Story Acceptance Criteria.
+In the previous lessons, you  learned about the process to evolve
+the story from a brief statement  to a fully developed user story.
+In this video, you will learn about a  critical component of every user story; the acceptance criteria.
+The acceptance criterias main  purpose is to let the product owner
+or customer know when the  user story has been completed.
+Thus, the acceptance criteria should be  clear, objective and preferably measurable.
+As we discussed in previous videos, the process  of creating and agreeing on acceptance criteria itself,
+is also an invaluable opportunity for  collaboration between the Development Team
+and customer or Product Owner. Both parties  agree on the acceptance criteria collaboratively.
+Now, let’s put this into action! What could be effective acceptance criteria for the following user story?
+As a warehouse employee, I can select   the paper size on which to print
+so that the printed label size matches the parcel size.
+For example, we might have the criteria, order details must include the order id,
+the shipping address and the  list of items in the parcel.
+The warehouse employee is able to select the size  of the order details from 3 sizes (A4, A5 and A6).
+The font size used is 12 point.
+As you can see, the acceptance criteria  consist of the requirements of the user story
+being developed that must be met  to mark the user story as complete.
+These evolve based on discussion  with the development team.
+Therefore, by using these criteria,  the product owner or customer,
+and the development team, will all know how to  identify exactly when this user story is complete.
+Now, with our acceptance criteria in  place, the development team has all
+the details required to proceed with  the implementation of the user story.
+In this video, you have learned  about acceptance criteria
+and what constitutes  sufficient acceptance criteria.
+In an upcoming video, you’ll learn how  to add an acceptance criteria placeholder
+to the user story template you’ve  previously created on Github.
+However, before you move forward, can you articulate acceptance criteria for the user stories you’ve
+previously created?  Take a moment and write them down.
+
+
+tart of transcript. Skip to the end.
+User Story Tasks.
+In the previous lesson, you learned about how the  acceptance criteria can be used to consider the
+User Story completed, and how the Agile team  articulates these criteria collaboratively.
+In this video, you will learn how  the development team breaks the
+User Story implementation into tasks to  facilitate the User Story’s execution.
+After the Agile team completes the  discussion about the User Story
+and the Development Team is comfortable with  the Acceptance Criteria. It is then time for
+the development team to plan the “Technical”  work required to implement the User Story.
+Implementing a particular User Story  involves various activities such as:
+creating the user interface, creating the HTML and CSS, creating the models, and the list goes on.
+We usually refer to various individual activities carried
+out by the development team to  implement a User Sstory as “Tasks”.
+As a key Principle of Agile is to build projects  around motivated individuals, by giving them the
+environment and support they need and trusting  them to get the job done, all technical and
+management decisions related to tasks are  the development team’s sole responsibility.
+Therefore, the development team  is responsible for identifying,
+assigning, and tracking tasks’ progress.  Also, they take all the technical decisions
+required to deliver various User Stories. Now, let’s revisit our example User Story.
+As a warehouse employee, I can select  the paper size on which to print
+so that the printed label  size matches the parcel size.
+For this one User Story, we could then have  several different sub-tasks, such as:
+Design a “print” icon and add  it to the order details page.
+Design the print layouts  for the different page sizes.
+Create the HTML and CSS for the  dropdown menu including the paper sizes.
+Create the code for the  model, viewer and controller.
+Test the completed functionality.
+Once the development team  completes all these tasks,
+the User Story is finished and ready to be  verified by the product owner or the customer.
+Usually, each development team  agrees on a standard to create tasks.
+Here are some of the typical practices.
+First, use verbs instead of nouns, such as “develop", "create", and so on.
+These verbs will act as clear calls  to action for the development team to complete.
+Secondly, do not create tasks that are too small or too big.
+The ideal task is one that can be  completed by a single person, in one day or less.
+Third, it is ok to use technical  language in tasks’ details
+as they are only visible for the technical team.
+And finally, ensure that you have defined tasks to  finish all the work as detailed in the Acceptance Criteria.
+In this video, you have learned how the  development team manages the work to be completed
+for a particular User Story using tasks and also  the standard practices for deciding on tasks.
+Next, you will learn how to estimate the effort and  time required to complete a User Story and the
+common story estimation technique used in the  Agile community. However, before you proceed,
+How do you think tasks are distributed to  development team members? Who decides on this?
+
+tart of transcript. Skip to the end.
+User Story Estimation.
+In the previous lesson, you  learned about creating tasks
+required to finish a particular user story. In this video, you will learn about the Agile
+perspective on how to estimate the effort  and work required to complete a user story.
+Estimation is a crucial planning pillar  in software solution development.
+It is vital to estimate the required amount  of work, the expected date of completion,
+and the development team’s size. However,  there are many challenges involved when
+estimating this data for large and small projects. First, let’s compare estimation in Waterfall vs Agile.
+In the traditional waterfall approach,  a considerable amount of time is spent at the
+beginning of the project to identify and estimate  various activities required to complete the work.
+These estimates are usually aggregated, and a detailed project schedule is compiled at the start of the project.
+It is crucial to be as accurate as  possible with the plan, as the project schedule
+is our commitment to the customer to  deliver. Nevertheless, things rarely, if ever,
+go as planned, and we are inevitably  unable to deliver on our commitment.
+Therefore, in Agile, we have learned from  experience that estimating accurately and
+committing to an end date of the work, based  on these estimations, is almost impossible.
+Therefore it’s not advisable to even try. Instead,  being predictive, over short term iterations,
+is good enough to keep us on track, while adapting to changes in requirements throughout the project duration.
+As a result, we can rely more on team collaboration, and  communication to control the workflow.
+Thus, the purpose of estimation in Agile  is not to “Commit” but to “Predict”.
+As with everything with Agile, the practices we  use to estimate our work has evolved.
+At first, we estimated the required effort using time  units such as hours or days. This technique
+is typically referred to as “Ideal Time”. The concept of “Ideal Time” is straightforward,
+we estimate the amount of time it takes to  finish a User Story, such as 3 hours, 3 weeks,
+3 months, or even 3 years. Seems simple, but  you should be aware of its serious drawbacks.
+First, converting the ideal time to the actual  amount of time it takes during the day to
+complete the task, or in other words, the  elapsed time, is very tricky and depends on many factors.
+Importantly, we usually fail to  incorporate distractions and other activities
+such as meetings, events and urgent defects  fixes, in our estimation. And even if we tried,
+it is not easy to estimate these factors. Another challenge is that, by nature,
+humans are not very good with absolute estimates,  but we’re much better at comparing things.
+For example, we find it very difficult to  precisely estimate the height of a person
+on their own, but we click can quickly  identify who is the taller of a pair.
+It’s this ability to compare things  more accurately, that brings us to
+our 2nd estimation technique, Story Points.
+With Story Points, we take time  completely out of the equation.
+Instead, we use relative estimation to  approximate the entire work to complete a story,
+relative to other stories. We simply establish  a benchmark, then map stories to predefined
+sizes such as 1, 2, 3, 5 ...etc. So instead of  saying, task 'a' will take 10 hours, we just say
+task 'a' will take twice as much effort as another  task, which we’re using as our benchmark value.
+Basically, by using story points,  a story marked as size 2 requires
+double the effort needed for a story of size  1. Individual values have no meaning on their
+own and might vary from one development team to  another as story point estimation is relative.
+There are several advantages to using  Story Points, as opposed to ideal time.
+First, Story Point estimation is relative  and, as discussed, we are much better, and,
+therefore, more accurate, with relative estimation.
+Second, because time is ignored (for the moment), you do not have to calculate and incorporate distraction time,
+as Story Points are just focused on the amount  of work done, not how long it took.
+As a result, in reality, the estimation process becomes  much more straightforward with story points.
+Now, you might be asking, how could any  system which completely ignores the time
+it takes to complete a task be useful  to predict project end or release date?
+We’ll learn more about that in the next video.
+But for now, it’s important to realise that  Story Points are more accurate because they
+are relative estimations, and also, only focused  on the work done, not the time that’s taken.
+It is also worth mentioning that we usually use  a non-linear scale for story points estimation
+as the uncertainty increases  as work size increases.
+The most common scales are the Modified  Fibonacci series and the Doubling Score.
+Finally, it’s important to note that the  development team is responsible for the estimation.
+The Product Owner or customer may  influence the development team by helping them
+understand and select trade-offs. However,  the final say is for the development team.
+In this lesson, you learned about  the Agile perspective on estimation
+and the common techniques used by  Agile teams to estimate User Stories.
+In the next video, you’ll learn about a new  concept called “Team Velocity” and how it is used
+to predict the time it takes to finish the work.  However, before you proceed,
+what could the development team do if there is  no consensus on a certain story estimate?
+Have a think about this, and write down some notes.
+
+
+art of transcript. Skip to the end.
+Team Velocity and Release Date.
+Previously, you learned about the Agile  perspective on estimation and how to
+estimate the effort required to complete a  user story with the story points technique.
+In this video, you will learn how to use  these story point estimates to predict
+the overall time it will take to release  a software solution or any part of it.
+There are 2 stages of calculating a project's  release date. First, we need to calculate the
+team velocity. Then, we can use this value to work  out the software solution’s final release date.
+In simple terms, Velocity represents,  on average, how many story points the
+development team can manage to finish in  one iteration of a particular length.
+As you might expect, it would be very difficult  to predict at the beginning of a project
+how much work per iteration our  team would be able to achieve.
+However, after running a few iterations, we can  begin to get a more realistic understanding of how
+much work is being completed in each iteration.  And because each iteration is of equal length, you
+can now begin to predict with a higher level of  certainty how many story points, on average,
+the development team can finish per iteration  in the future. This is the team velocity value.
+As a result, with the team velocity known, you can  now predict the solution’s expected release date
+or a particular part of it. First, estimate the total story points for
+all of the targeted user stories, then  divide this number by the team velocity,
+and you’ll have the number of iterations. As  the duration of the iteration is fixed. You can,
+therefore, more easily predict  the number of weeks to release.
+Let’s take an example. If the development team  estimates that user stories targeted for the next
+release require 200 story points, and from  the previous iteration, the average team velocity
+was 25 story points. This means we’ll need eight  iterations to finish the target stories.
+With each iteration lasting two weeks, the predicted time  to release the target stories must be 16 weeks.
+Keep in mind that this is a prediction  and not a commitment! Commitments entail
+freezing the changes. However, in Agile,  we welcome changes; thus, we should expect
+changes in the priorities as the work progresses. In this lesson, you learned to create a user story
+and evolve it from a brief statement to a  fully developed user story including acceptance
+criteria and tasks. Later, we discussed  different user story estimation techniques
+and illustrated why story point estimation is  the preferred technique in the Agile community.
+Next, you’ll learn about another crucial  component of Agile. The Product Backlog.
+However, before moving forward,  let’s have a quick challenge.
+Based on the provided example, how would you  handle a situation, from an Agile perspective,
+if the product owner insisted on releasing  after seven iterations instead of eight?
+
+
+Start of transcript. Skip to the end.
+Introduction to Product Backlog.
+Previously, you learned about the Agile perspective on estimation, and story points as a preferred estimation
+technique in Agile. Then, you learned about Team Velocity  and how to use it to predict release dates.
+In this lesson, you’ll explore the Product  Backlog as a single authoritative source
+that drives the development team’s work  and the process to maintain it.
+Also, you’ll learn about the criticality of the product  owner’s role in maintaining the Product Backlog.
+First, let’s identify what we  mean by the Product Backlog.
+As work progresses, the development  team and the product owner
+will be receiving requests for new user stories,
+higher-level ideas in the form of epics, or  general suggestions for enhancements, as well as,
+reports of issues and defects in the solution. For now, let’s call all these requests ‘work items’.
+To effectively manage and prioritise work items.  The product owner is responsible for maintaining a
+centralised list of all work items the development  team can deliver for the customer, to realise the
+value from the software solution. This list is  usually referred to as the “Product Backlog”.
+And we typically refer to the work items  inside it as “Product Backlog Items” or PBIs.
+There are several advantages to using a  Product Backlog in the planning process.
+First, in contrast to the traditional Waterfall approach,
+the Product Backlog is a dynamic document to  respond to changes effectively.
+We add PBIs, remove them, break them down and re-prioritize  them based on previous cycles’ feedback.
+This process is called backlog refinement, and  we’ll discuss it in detail later in this lesson.
+Another crucial role for the Product Backlog is  to establish a single authoritative source of work
+undertaken by the development team. Nothing  should get done that isn’t on the Product Backlog.
+This reduces interruption of the development team
+and ensures that the development team  focuses on delivering value to users.
+Moreover, the Product Backlog is an effective  way for the Agile team to collaborate and
+communicate what they are working on and  what they plan to work on in the next iteration.
+There are many ways to represent the backlog to  manage PBIs. Though the digital form automates
+many activities, some teams still prefer to use a  physical backlog, using post-it notes on walls for
+better visibility for everyone in the Agile team. Finally, it is critical to realise that having
+a PBI on the backlog is not a guarantee that  it will be delivered. It is instead, an option that the
+Agile team might consider in delivering value  to the customer rather than a commitment.
+In this lesson, you learned  about the Product Backlog
+and how the Agile team depends on it  to capture and track different PBIs.
+Next, you’ll create a Product Backlog in  Github, then you’ll learn about the process
+called backlog refinement, which ensures  that the backlog is well-maintained
+this will continuously drive the development effort  with a focus on delivering value to users.
+However, before you proceed, based on what you've learned so far. How would the following PBIs be arranged in
+the backlog, from top to bottom? Brief User stories, detailed User Stories and Epics.
+
+Start of transcript. Skip to the end.
+Create a Backlog with Github.
+Previously, you learned about the crucial  role of the product backlog to help the
+Agile team stay focused on the work  that delivers value to the customer.
+In this lesson, we’ll use functionality  in Github issues called Milestones
+to create a Product Backlog.
+Usually, we do not record all issues  received directly in the backlog as PBIs.
+Some issues, especially those captured from  users’ suggestions, questions and requests,
+are addressed without involving the development  team. Thus, we first keep them in a temporary
+location for initial verification before  qualifying them to enter the Product Backlog.
+For our product, the temporary  location is on the main “Issues” list.
+For the Product Backlog, we’ll  use the Milestone functionality
+located in the issues tab in Github. Milestones collectively manage and track progress
+on groups of issues and prioritise them. You can  also optionally define a date to meet a deadline.
+In our case, we will create a milestone without a  due date, as we will use it as a backlog to manage our PBI.
+Again, Github simply uses different  terminology to achieve the same outcomes.
+Now let’s “create a new milestone.” Let’s call it “My First Product Backlog.”
+We will not add a due date, as it  is optional, and we usually do not
+assign a due date for the backlog. Under description. We’ll add
+“This is my first Product Backlog.” Finally, Click “Create Milestone”.
+You’ll be redirected back to the list of defined  Milestones where you can find our new Milestone.
+Now, let’s move the User Stories you’ve  previously created to the Backlog we’ve created.
+Click on “Issues” in the top menu.
+Check the box next to the target user stories, and then click on “Milestones”.
+Locate “My First Product Backlog”  from the drop-down and select it.
+After you select “My First Backlog”, it  will appear under the selected user stories.
+To view its content click on  “My First Product Backlog”.
+You’ll be redirected to the Milestone details  page. And you’ll find the user story added.
+You can also create user stories  from inside the milestone. Click “New Issue”.
+You’ll find the User Story template that you’ve previously  created on the top. And click “Get Started”.
+So I'm going to give this a title, just another User Story.
+And then we can edit the placeholder here to say "Customer".
+And we can add a capability which is to add multiple items to the cart.
+And the benefit you would see from this is I can purchase multiple items with one click.
+If we submit, "New Issue",
+then we will see that this User Story 3 has been added to the backlog.
+As you can see, “My First  product backlog” automatically
+appears under “Milestone” on the right hand menu.
+In this video, you learned how to create a product  backlog using Milestones in Github. In the next video,
+you’ll learn about the process to maintain  the backlog called Product Backlog Refinement
+
+tart of transcript. Skip to the end.
+Product Backlog Refinement.
+Previously, you learned about the product backlog  as a crucial Agile component and how it drives the
+software product development. Then, you learned  how to configure a backlog using Github issues.
+In this lesson, you’ll learn to refine  your product or solution backlog
+to ensure that it is well-maintained and will  continuously drive the development effort
+with a focus on delivering value to users.
+As previously discussed, the product backlog is a single
+authoritative source that drives the development  team’s work and enhances collaboration.
+Thus, it is crucial to ensure that there  is enough work that adds value ready for
+the development team to work on and that it is  mainly in the form of User Stories or Defects.
+Also, the PBIs should always be prioritised  based on evolving business needs and aligned
+with business priorities to ensure that we  always deliver the most critical PBIs first.
+As we are flexible with changes in Agile, we  should continuously maintain the product backlog.
+This process is called Backlog  Refinement or Backlog Grooming.
+Backlog refinement includes many activities. First, before inserting new items in the backlog,
+we should verify new requests, suggestions and  defects and record them in the backlog in light
+of their alignment with the business objectives. Second, we should discuss and refine PBIs and user stories.
+As we might need to split a  story or epic into multiple user stories,
+or get more details for a certain story  using the 3Cs process discussed previously.
+Third, We should estimate the amount  of effort needed to complete each PBI.
+The estimated effort might affect  the prioritisation decision.
+It also supports the process of  predicting release time, as discussed.
+Also, we should continuously reprioritise PBIs.  The order of product backlog items in a product
+backlog might change for many reasons  such as changes in business directions,
+new requirements identified or crucial  defects detected in the solution.
+PBIs to go next should always be  on the top of the product backlog.
+And finally, we might need to remove items that  are not valid any more from the product backlog.
+The continuous refinement of product backlog  items gives a product backlog its dynamism.
+As a result of backlog refinement,
+the backlog would have the PBIs  that are ready for development
+on the top, these PBIs are mainly in  the form of user stories and defects.
+Next, come the PBIs that are well understood but are yet to be discussed with the development team,
+they need to be detailed further and require agreement  on the acceptance criteria.
+And finally, at the bottom, we find  epics that need further discussion
+to be better understood and broken down. In this video, you learned why you should
+refine the product backlog and what  activities are part of this process.
+In the next video, you’ll explore how to perform  backlog refinement activities in Github Issues.
+Later, you’ll learn about the importance of the  Product Owner role in maintaining the product
+backlog and driving the development work.  But first, how often should the
+Agile team perform product backlog  refinement? Note down your ideas.
+
+
+tart of transcript. Skip to the end.
+Product Backlog Refinement in Github.
+Previously, you learned how to  create a product backlog in Github
+and the activities the product owner should  perform to maintain the product backlog.
+In this video, we’ll learn about the different  functionalities in Github to refine our backlog.
+Together using GitHub Issues functionality,  we’ll explore how to reprioritize PBIs,
+archive completed PBIs, reference one PBI to  another, and, finally, how to delete a PBI.
+We'll start at the Issues tab.
+First, browse to the backlog you’ve created  previously. Once this page loads, click on
+“My First Product Backlog”. The list of user stories that you’ve previously created will be listed.
+To reprioritise a PBI, first, hover the cursor over the task you want to prioritize.
+You’ll notice a dotted icon appearing just before the checkbox.
+Use this icon to drag and drop the  selected task up or down to change the PBIs order.
+Now let’s archive a PBI. Archiving a PBI  will only remove it from the backlog list;
+however, the item is still  searchable from the Issues View.
+To archive, click on any PBI item. Then,  scroll down the page. Under the issue details,
+you’ll find a text area where you can  comment or comment and close the PBI.
+Let’s add a comment saying “This is  completed” and click on “Close”.
+Once done, the Issue History is updated  to indicate that the item is closed.
+You can reopen the item again at any time by  adding a comment and clicking on “Reopen Issue”.
+You can always look at the list of closed  items in your product backlog main page
+by clicking on “Closed” tab on top of your PBI list Sometimes, you might reference another PBI to
+ensure they are developed in the right order or to indicate that a particular story belongs
+to a particular Epic. To achieve  this, you can use the link feature.
+You can reference items both in the description  field or in the comment field. To achieve this,
+click on any PBI item and click on the “...” on the  top of the issue details page, then click on Edit.
+In the edit view, type “#,”
+and a contextual menu will appear to suggest the  list of issues you can link to. Alternatively, you
+can click on the “reference and issue” icon on the  text area menu. And select one item from the menu.
+For now we’re not going to save this. However,  you might need to do that in the future.
+Finally, let’s delete a PBI. Keep in mind  that deleting a PBI is a permanent process
+and cannot be undone. Deletion will  remove the issue from the search,
+and previous references  will point to a placeholder.
+With an issue selected and open, scroll down  the page till you see the trash bin icon
+with the words “delete issue” next to it.
+Click on Delete. And confirm the deletion. After this,  you’ll be redirected to the "main issues” page.
+Click again on “Milestones”, then select “My  First Product Backlog” to go back to your backlog.
+At the time of this recording, Github  does not support advanced features that
+can also be used to further refine the product  backlog, such as splitting and merging issues.
+In this video, you learned how to  refine your product backlog on Github.
+In the next video, you’ll learn about  the product owner’s role and why it is a
+crucial role to drive software development and  ensure value delivery to customers and users.
+
+tart of transcript. Skip to the end.
+Product owner role.
+In the previous lesson, you learned about  product backlog refinement to ensure enough
+value-adding Product Backlog Items or PBIs were  ready for the development team to work on.
+These Product Backlog Items are prioritised based  on the latest business priorities and directions.
+In this lesson, you’ll learn about the  product owner role and its importance
+to drive the development work and maximise  the value created by the development team.
+As discussed earlier, the product backlog is  crucial to facilitate the Agile team collaboration and
+maximise the software solution’s value. Therefore, the Agile team should
+work together to manage and maintain it. However,  it is highly recommended to have a specific role
+in product backlog maintenance. To successfully perform this role,
+the product manager should  first identify and describe the PBIs
+to build a shared understanding of the problem and  a solution for each PBI within the development team.
+Secondly, the product owner should decide  on the priorities of the PBIs to deliver
+the maximum outcome with the minimum effort. Thirdly, once a user story is completed by
+the development team, the product owner makes  the final decision as to whether the user story
+is delivered per acceptance criteria. Finally, the product owner should serve
+as a single source of information to  ensure the development team is focused.
+This reducing churn resulting  from team members waiting for answers,
+or conflicting priorities, and by addressing  any concerns that development teams may raise.
+All of these activities should be performed  with the highest level of transparency
+and in collaboration with the development  team. The Product Owners should agree with
+the development team on the frequency of  meetings to refine the product backlog.
+In simple words, the Product Manager  represents the User within the Agile team.
+It is worth noting that the responsibility of  the product owner, as well as the exact title,
+varies from one Agile framework to the other.  You may see roles such as “Product Manager”,
+“Product Champion”, “Senior Customer”, “Product  Director” and “Value Manager”.
+However, the primary mandate stays the same. To maximise  the value delivered by the development team.
+In the last few videos, you learned about  the product backlog and its importance to
+drive the development team and ensure the  highest possible value for the least effort.
+You also learned about the process to refine  this dynamic document to ensure it drives the
+work in the right direction. In this video,  you learned about the Product Owner role
+responsible for maintaining the product backlog  to maximise the development team’s value.
+In the next video, you’ll learn about two  important and related components of Agile,
+prioritisation and timeboxing.
+
+art of transcript. Skip to the end.
+Timeboxing.
+Previously, you learned about the product  backlog as a crucial component to driving
+development work in alignment with  business priorities and outcomes.
+In the following few videos, you’ll learn about  timeboxing and prioritisation practices in Agile
+and how they ensure that  the Agile team stays focused
+and delivers an earlier return on investment. First, let’s explore the concept of timeboxing.
+Timeboxing means allocating a fixed period,  called a timebox, within which planned work or
+activities occur based on the assigned priority.  Once the duration is over, the work should stop,
+and any remaining work should be rescheduled  and prioritised for the next timebox.
+One interesting fact about timeboxing  is that the timebox duration
+is not estimated based on the effort  required to complete the work.
+But instead, it is based on a future point in time where  we wish to stop and reflect. Thus, the timebox is
+never extended to accommodate the work initially  planned for completion within that timebox.
+In Agile, an iteration is a timebox.
+The iteration duration is fixed and user  stories that are not completed within
+a particular iteration are returned to  the Product backlog for reprioritization.
+Let’s take an example; suppose your  team predicted to finish five user stories
+in the current iteration. Three  days before the iteration end date,
+your team realises it is only possible to finish  four due to technical issues. In these situations,
+you should not extend the iteration time  to complete the remaining user stories,
+nor compromise quality by trying to squeeze the  remaining user story in the current iteration.
+Whatever user stories remains should be returned  to the product backlog for refinement.
+There are many benefits associated  with timeboxing.
+First, it enables moving from plan-driven to value-driven  development. Delivering the most important
+features first leads to an earlier return  on investment than with the waterfall model.
+Second, defining and limiting the  amount of time dedicated to an activity
+encourages the team to get work done  immediately and avoid any non value-add effort,
+such as unnecessary documentation.
+Third, timeboxing helps the Agile team  stay focused on the time box’s goal and
+not get distracted, as they are aware  that the timebox can not be extended.
+And finally, timeboxing promotes the culture of  build-learn-measure. The end of each iteration
+is an excellent opportunity to evaluate  progress and make adjustments to your plans.
+Finally, It is worth noting that timeboxing  is not only applied on the iteration level,
+but we also use it on a  project or even meeting level.
+For example, the Product Backlog Refinement  meeting should not exceed 4 hours per week.
+In this lesson, you’ve learned about  timeboxing and how it is applied in Agile.
+In the next video, you’ll explore how to configure  iteration in Github. Later you’ll learn about
+a commonly used prioritisation technique; the  MoSCoW prioritisation. But before proceeding,
+what do you think the Agile team should do, if  business priorities changed within the duration
+of the iteration and a considerable amount  of planned work is not relevant anymore?
+Note down your answers.
+
+art of transcript. Skip to the end.
+Create an iteration with Github.
+Previously, you learned the concept of  timeboxing and how it helps enhance the
+predictability of delivery and ensures the  team focuses on value-adding activities.
+In this video, we’ll learn how to create a  timebox for an iteration and assign PBIs to it.
+As discussed previously, GitHub features  are not built explicitly for Agile.
+However, many features are  well-suited for Agile team usage.
+Now based on what you’ve learned so far about  Github. Can you think of a way to implement
+an iteration timebox? Pause the video and give  yourself 5 minutes to try this.
+Then press play and we’ll go through the process in detail. In order to create an iteration in Github
+we’ll use the Milestone functionality  located in the issues tab.
+However, this time we’ll define a due date.
+So click on 'Milestones'.
+Click on 'New Milestone'.
+And let's give it the name “Iteration 1".
+We'll add a due date and we'll assume that our  iteration timebox is two weeks from today’s date;
+Under the description, we can add, “This is my first iteration.”
+And then we can click “Create Milestone”.
+You’ll be redirected back to  the list of defined Milestones.
+Now, assuming that your Agile team has already  agreed to complete some stories in “iteration 1”,
+then we need to move them from the “My first  Backlog” milestone to the “Iteration 1” milestone.
+To achieve this, click on “My first Backlog”.
+And select some the user stories or PBIs  you intend to complete in iteration 1.
+Once they're selected, you can click on “Milestone”,
+And then from the drop-down, select Iteration 1.
+It may take a few seconds for the page to load,  butt you’ll see that the PBIs have been moved.
+So let’s confirm that they are actually moved to  “Iteration 1”. We can click on “Milestones”
+and then click on “iteration 1.” You’ll see that the PBIs have been added under this iteration.
+In this video, you learned how to create an  iteration timebox and assign PBIs to it.
+In the next video, you’ll learn how to prioritise PBIs  within an iteration using the MoSCoW technique.
+
+
+art of transcript. Skip to the end.
+MoSCow prioritization part one.
+Previously, you learned about  the concept of timeboxing.
+In this video, you’ll learn crucial guidelines  for prioritisation with the MoSCoW technique.
+Typically, in the waterfall approach, as the scope  is fixed, the expectation is usually set from
+the start of the project that all requirements  are considered as “Must Have” and, therefore,
+need to be delivered. If we encounter any  issues, we tend to extend the project end date.
+However, In Agile, the scope  should be a variable factor,
+while time remains fixed. As we deliver the  solution incrementally through repeated timeboxes,
+i.e. iterations, we do not allow the end date to  slip, whether on a project or iteration level.
+Thus, it is vital to understand the relative  importance of the PBI to be completed
+to deliver the most crucial work first.
+As a consequence, if we reach the end date of the  iteration or project without finishing all the work,
+then the remaining work is by definition  of lower priority than what was completed.
+You could use any prioritisation  technique you prefer.
+However, we recommend using the MoSCoW  technique, widely adopted in the Agile community.
+The beauty of the MoSCoW technique is that it  provides a clear indication of the PBI and the
+expectations of its completion by using 'Must  Have', 'Should Have', 'Could Have' and 'Won’t Have'.
+“Must-Have” PBIs are non-negotiable and are  guaranteed to be delivered within the iteration
+or project. There is no point in releasing the  solution on the end date without these items
+as they are necessary for it to work.  Core functionality, as well as legal,
+safety and security related PBIs, are  usually prioritised under “Must Have”.
+If there is some workaround  to achieve the goal of PBI,
+even if it is manual and painful, then we should  consider it as “Should Have” or “Could Have” .
+Categorising a PBI as a Should Have or Could  Have does not mean it won’t be delivered.
+Simply delivery is not guaranteed  within the current iteration.
+A Should Have PBI is important but not  vital. The product still functions; however,
+a should have adds significant value if they are included.  Performance improvements, minor defects fixes,
+or new functionality are a “Should Have”  as without them, the product still works.
+Could have items are desirable but  less crucial than should have items.
+“Could-Haves” are not core to the product or  solution. Compared with “Should-have”, they have
+a much smaller impact on the outcome if left out.  Thus, “Could-Have” items provide the main pool of
+contingency since they would only be delivered  in their entirety in a best-case scenario.
+When a problem occurs and the deadline is at  risk, one or more “could-have” items are dropped.
+Finally, “won’t have” means that the Agile  team has agreed that the PBI wouldn’t be delivered.
+On the iteration level, it means that it  won’t be included in the current iteration,
+but it might be included later in  the project but in another iteration.
+At the project level, it means these PBIs  won’t make it to the deployed solution.
+We still record the ‘Won’t have’ PBIs  as they help clarify the project’s scope
+and manage expectations. Some items will  simply not make it into the deployed solution.
+Combining sensible prioritisation with timeboxing
+leads to an earlier return on investment,  and improved predictability of delivery.
+This also protects the quality  of the solution being delivered.
+In this video, you learned  about MoSCoW prioritisation
+and how to combine it with timeboxing  to better deliver the software solution.
+In the next video, you’ll learn additional  practices for better prioritization using
+the MoSCoW technique. Before you proceed,  how could you help ensure that the product
+owner or customer won’t prioritize  all user stories as a “Must-have”?
+
+
+tart of transcript. Skip to the end.
+MoSCow prioritization part two.
+Previously, you learned about  the timeboxing practice in Agile
+and its importance to keep the team focused  on delivering an earlier return on investment.
+In this video, you’ll learn about good  practices for the MoSCoW technique.
+Usually, business people tend to  push everything as “Must-Have”,
+especially if they are still new  to Agile culture and mindset.
+Thus, it is crucial to set some ground rules to  ensure we get the best out of prioritisation.
+First, the team should collaboratively agree  on the split of effort between “Must Have”,
+“Should Have”, and “Could Have” in each  iteration. However, the spread of priorities
+should provide enough contingency to ensure  confidence in a successful project outcome.
+Remember that “Must-Haves” define what is  guaranteed to be delivered, and anything
+other than a “Must-Have” is, to some degree,  a contingency. Hence, it is not recommended
+that the percentage of Must-Haves exceed 60% of  the overall effort planned for the iteration.
+Then, a reasonable contingency level - typically  around 20% should be “Could Have” effort.
+Creating a sensible pool of “Could-Haves” sets the correct  expectations for the customer or product owner
+that these items may be delivered in their  entirety in a best-case scenario.
+Still, the primary focus will always be on protecting  the Must-Haves, then the “Should-Haves.”
+Let’s take an example, suppose that  the Product owner proposed to have
+A, B, C, D and E user stories to be  implemented in the coming iteration.
+As the current team capacity is ten story points  per iteration, a maximum of 6 story points could
+be “Must Have”, and at least 2 Story Points  should be “Could-have”, what’s remaining are by
+default “Should-Have”. Based on our prioritised  list, A & B might be assigned a “Must Have”,
+C is a “should have”, and “D” is a “Could have”,  while “E” is a ‘won’t have’ in this iteration.
+Now the development team has a  prioritised list for PBIs to be completed
+within the iteration and can  proceed with development.
+Keep in mind that prioritisation is relative  to the remaining PBIs in the backlog.
+A PBI might be prioritised as  “Won’t have “ in “iteration 1”,
+but later as “Must Have” in iteration two,  if for example, it must be included in the
+release after iteration 2. Priority is  always relative to the remaining PBIs.
+In this video, you learned  about MoSCoW prioritisation
+and how to combine it with timeboxing  to deliver the software solution better.
+In the next video, you’ll explore how we can  implement MoSCoW prioritisation in GitHub.
+However, before you proceed, what do  you think the development team should
+do if they realise that not all “Must-have”s  can be completed in a particular iteration?
+
+
+art of transcript. Skip to the end.
+Create and Assign Labels in Github.
+Previously, you learned about the  MoSCoW prioritisation technique
+and how to use it to ensure that crucial  user stories or PBIs are delivered first.
+You also created an iteration timebox,  and you assigned users stories to it.
+In this video, you’ll explore how to  implement MoSCoW prioritisation in GitHub
+and apply the prioritisation on  the User Stories in “iteration 1.”
+So we'll start in the Milestone  section in "iteration 1".
+To achieve our goal, we’re going to use  a feature in GitHub called “Labels”.
+Labels allows you to classify issues by  creating, editing, applying, and deleting labels.
+You can manage your work on GitHub by creating  labels to categorise issues or PBIs in our case.
+Once a label exists, you can use that label on any issue within that repository.
+So, let’s start. First, click on the  labels button on the top of the view.
+GitHub provides default labels in every new  repository. Default labels are included in
+every new repository when the repository is  created, but you can edit or delete them.
+You can also add customised labels.
+So we'll click on “New Label.”
+A form appears on the page, let's  add “Must Have” under the label name.
+You can also add a description.
+But we'll skip this for now.
+To distinguish different labels visually,  Github renders each label in a different colour.
+A random hexadecimal colour code is  generated for your new label automatically.
+However, you can also customise that as you’re  already familiar with hexadecimal colour coding.
+If you click on the colour box you can see the
+list of the deafult colours codes that are  available. So we click, ”Create Label”.
+Now, pause the video and create 3 more labels  for “Should have”, “Could have”, and “Won’t
+Have”. Make sure to choose different colours  so you can differentiate the labels, easily.
+Now, that our labels are ready, let’s add them to “Iteration 1” BPIs.
+First, we need to return to the milestones  window to view our Milestones again.
+So we'll click on Milestones. And  then, we'll click on Iteration 1.
+So here we're assuming that you still have  some user stories listed under iteration 1. If you don't,
+then just go and add some now. They won't necessarily match exactly the user stories we are using in this video.
+But don't worry about that.
+Next, what we need to do is select check boxes, next to our "must have" stories.
+So we have to keep the rule of the 60%, so we're only going to take 3 here.
+And we're going to set these as "Must have".
+So just click anywhere outside, wait a few seconds, and you'll see that we have "must haves".
+Now if you can pause the video, repeat that process for “Should-have”,
+“Could have”, and “won’t have”. Make sure  that you use a correctly balanced distribution
+between “Must Have”, “Should-have”,  and “Could have" as we discussed in earlier videos.
+Great work! Now, if you browse  to your Iteration page,
+you should see that all iteration user  stories are now prioritised using the MoSCoW technique.
+I'm just going to reorder them into "Must-have”, “Should have”, "could-have" and “won’t have” from top to bottom.
+You could also use labels for your story  point values, whether Fibonacci or doubling,
+As they can be seen adjacent to the  title while prioritising your PBIs.
+In this video, you learned Github Labels and how  to use them to implement MoSCoW prioritisation.
+In the next video, you’ll learn about another core  component in Agile, Information radiators.
+
+tart of transcript. Skip to the end.
+Information Radiators Overview.
+Previously, you learned about timeboxing in Agile,
+and its importance to keep the team focused  on delivering an earlier return on investment.
+In the upcoming videos, you’ll  learn about “Information Radiators”,
+which are real-time, informative and  straightforward work status displays, and how
+to leverage GitHub functionalities to configure  “Information Radiators” for your project.
+First, let’s start by explaining what  we mean by information radiators.
+“Information Radiator” is the generic term for  any handwritten, printed or digital displays
+which the Agile team places in a visible  location so that all team members can see
+the latest information about work at a glance. Information radiators usually show critical Agile
+team information such as remaining  user stories, current team velocity,
+user stories’ status in the current iteration,  the progress toward the next release,
+the total count of open defects and so on. Using information radiators has many advantages.
+First, information radiators emphasise that we have nothing to hide from the customer, business people or ourselves.
+A genuine Agile Team is more concerned about identifying and confronting
+problems collaboratively, rather than hiding them. Second, information radiators promote
+responsibility towards achieving the joint team  goal. The whole Agile team has visibility on
+the status and the objectives, so  they work together to achieve it.
+Moreover, they boost feedback and communication  as they might provoke conversation within the
+Agile team and with business people,  yielding useful insights and ideas.
+And finally, information radiators  remove the need to interrupt team members
+simply to find out “What’s going on”.
+As any interested individual can see the  progress by themselves with minimal effort.
+However, to realise the previous benefits,  information radiators should be precise, accurate,
+and reflect the work’s real status; we should not  hide or mask problems; instead, we should use them
+as opportunities to improve performance. Also, we should continuously update them.
+Usually, all agile members are encouraged  to update information about work progress.
+Moreover, they should also be readable and  understandable at a glance.
+Any complex display of information will only put off the  people who try to consult it.
+Thus, traffic lights or coloured stickers are commonly used by  Agile teams to improve efficiency and clarity.
+Besides, they should be easily visible and  accessible to all Agile team members.
+They should be presented so people cannot miss them, such  as the project management system’s landing page
+or a prominent wall in the Agile team area. Most importantly, the information displayed should
+enable the Agile team to take action and make  decisions. We should not show information unless
+we are aware of its purpose and how it would help  us identify issues and fix them at the earliest.
+And finally, we should decide and develop  the various radiator contents collaboratively
+to ensure that the information presented can help  individuals perform their roles at their best.
+Throughout the years, many forms of information radiators have evolved, such as:
+Boards, sometimes called Planning boards,  Team boards, or Kanban boards.
+Charts such as a BurnDown Chart.
+Traffic lights to reflect the  status in green, amber or red.
+Impediment lists to show anything  that slows down the development team.
+These dashboards are usually presented on physical  or digital displays or in a computer program.
+In this video, you learned  about information radiators
+as an additional means to promote collaboration  and keep a focus on the Agile team’s shared goal.
+In the next video, you’ll learn about the  most commonly used information radiators in more detail.
+We’ll start with the Boards.
+
+Start of transcript. Skip to the end.
+Boards.
+Previously, you learned about information radiators.
+In this lesson, you’ll learn about Boards, the most commonly used information radiator in the Agile community.
+The primary purpose of a board is to summarise team progress and the current status of the
+work progress for a particular iteration.
+In its simplest form, it comes with three primary columns “To-do”, “Doing”, and "Done.
+Usually, towards the end of a particular iteration, the Agile team starts planning for the next iteration,
+by agreeing on user stories to be included in the future iteration and their respective priorities.
+Once the new iteration starts, the development team pins the agreed User Stories cards in
+descending priority order under the “To-do” column on the board.
+Then, based on the work progress, the Agile team members move the User Stories cards to
+“Doing” and then finally to “Done”.
+Ideally, the board should never be more than one working day out of date, as it forms the
+focus for the Daily Stand-up meeting.
+A daily standup meeting is a face-to-face meeting, conducted by the development team
+every day to discuss the work progress, work planned and identify impediments.
+Based on their needs, the Agile team might customize their board.
+They might use other columns for the work stages, such as “New”, “Design”, “Coding”,
+“Testing”, and “Deployment”.
+They might also add other tracking dimensions on the board, such as workstreams, users,
+solution areas, and so on.
+You can achieve this with swimlanes which are horizontal categorisations of Product Backlog Items (PBIs).
+Some most common examples of using swimlanes are:
+One swimlane per team if you’ve multiple teams working on the same solution.
+One swimlane per team member: For smaller team organisation, it's not uncommon to use
+one row per person to gain instant visibility into various team members' workloads.
+A dedicated Swimlane for blocked items or items on hold to emphasise the criticality
+and the risk associated with them.
+Finally, It is worth noting that various teams might use different names such as planning board,
+teams board or Kanban board.
+Nevertheless, the purpose is the same.
+In this video, you learned about boards as a way to present work progress.
+In the next video, you’ll learn how to create a board in Github.
+
+
+tart of transcript. Skip to the end.
+Create an iteration board on Github.
+Previously, you learned about information radiators before exploring the board types in detail.
+In this video, you'll explore how to create and manage a board in Github,
+and then use it to track our work progress for iteration one.
+As discussed previously, GitHub features  are not built explicitly for Agile.
+However, many features are well-suited for Agile  team usage. To implement an iteration board,
+we’ll use a feature in  Github called Project boards.
+Project boards on GitHub help you organize and  prioritize your work. You can create project
+boards for specific feature work, comprehensive  roadmaps, or even software release checklists.
+With project boards, you have the flexibility  to create custom workflows that suit your needs.
+To generate a board, you first need  to create a project.
+After the form loads, we'll give this a name of   “Iteration 1 Board”.
+And then we'll give it a description.
+So in here we can type “a board to coordinate, track,  and update work planned for Iteration 1”.
+For the “Project Template”, select “Basic Kanban”,  which is a simple board with three columns:
+To-do, in progress and done.  And then click on “Create Project”.
+Now we need to add the iteration PBIs  to the board to start tracking progress.
+However, before we do that,  let’s do some housekeeping.
+First, the “To-do” column is pre-populated with  few cards to help you get started.
+To remove them, click on the three dots on the top right  side of each card, then select “Delete note”.
+Repeat this until the “To-do” column is clear.
+Now let’s add our User Stories to the iteration.
+To do so, click on “Add Card” next to the “Filter Card” field.
+With the side menu open, in the search field we're going to search for our iteration 1 milestone.
+So we type in, milestone: “iteration 1”.
+And this will filter just the stories assigned to iteration 1.
+Other filters are available and you can click on the ‘issue search’ link to see them.
+Then, start moving the User story cards  to the “To Do” column. You can do this
+by clicking the left mouse button and dragging  them to the To Do column and then dropping them there.
+Place them in order of effort so that the must-haves  are at the top in descending story-point order.
+Then we can add a should-have and  finally a could-have as a contingency.
+Next, I’d like you to try to update an  existing column on your Board.
+Can you change the “In Progress” column to “Doing”? Pause the video and take a minute to try and do that.
+Welcome back. I’m sure it didn’t take  you the full minute to figure this out
+but let’s go through the solution  anyway. To edit an existing column,
+simply click the three dots on the column  header. Then click on “Edit column”
+type “Doing”, then click on “Update column”.
+If you would like to customise  the workflow further,
+close the add card sidebar and you can add  more columns by clicking on “Add Column”.
+Your iteration board is now ready, and you can  start using it by moving cards from one column to another
+to reflect the work progress in iteration 1. If you've completed all the user stories, or
+no longer need to use a particular project board,  you can archive that board, and reopen it later.
+To do so, first close the “Add Card” menu;  if it is still open, then click on “Menu”.
+Once the menu opens, click on “Close Project”.
+Once the operation is complete, the  project status will be updated to closed.
+You can also delete an existing project board  if you no longer need access to its contents.
+To do so, click on “Menu” again, then the three  dots next to the board name, and select “Edit.”
+Select “Delete Project” at the bottom  of the popup, then confirm the deletion.
+In this video, you learned how to create and customise an iteration board to track the work progress.
+In the next video, you’ll learn about another type  of information radiator called a Burndown Chart.
+
+
+tart of transcript. Skip to the end.
+Burndown Charts.
+Previously, you learned about  creating Kanban boards in GitHub.
+In this lesson, you’ll  learn about Burndown charts,
+another popular information  radiator in the Agile community.
+The Burndown chart’s primary purpose is to show how quickly the development team burns through the user stories.
+The burndown chart shows the total effort remaining against the remaining time till the end of the iteration.
+Let’s explore how this works. As previously discussed,
+the iteration planning is concluded with an  agreement within the Agile team on which user stories
+have been planned for the next iteration  and their priority. As a result of this planning,
+the team also knows the total story point value  planned to be completed in the next iteration.
+On the graph, the quantity of work  remaining is shown on a vertical axis,
+while the time elapsed since beginning the  iteration is placed horizontally on the chart.
+The iteration starting point, therefore, is  the farthest point to the left of the chart
+and occurs on day zero of the iteration. At this  point, the remaining work is equal to the planned work
+as work hasn’t started yet. The iteration  endpoint is farthest to the right,
+and marks the final day of the iteration the remaining work should ideally be zero at this point.
+Now, the ideal remaining work line is the  line connecting the two dots points.
+It shows the sum of estimates for all  story points yet to be completed.
+As the work progresses, each day, a new point  is added to this line to represent the work remaining.
+The actual line will fluctuate above  and below the ideal work line based on the works
+progress and impediments the team faces. If the  real work line is above the ideal work line,
+it means there is more work left than what  we originally planned. In other words,
+we are behind schedule. However, if the  actual work line is below the ideal work line,
+then there is less work left than had been predicted,  and the iteration is ahead of schedule.
+As you can see, the burndown chart is a very  useful tool for project management. Thus, many
+Agile teams extended it’s usage to the release  and project level, where they track the team
+velocity history per iteration and the progress  toward achieving the release or project goal.
+In this video, you learned about the  Burndown chart as a straightforward
+yet effective way to track a  development team’s progress.
+In the next unit, we’ll summarise  what we’ve learned so far.
+
+You’ve gone a long way with Agile. However, this is not the end!
+
+As you start your career in software development, you’ll come to realise just how crucial it is to adopt an Agile mindset and perspective before adopting any Agile practices. In reality, practices without philosophy rarely add any value to organisations, nor customers. Once the right mindset is in place, you may start adopting various practices and techniques or even invent new ones based on your organisation, customer and team needs.
+
+However, you should be cautious not to follow any methodology or practices religiously and forget the main driver for the “Agile” movement, which is to uncover better ways for developing software solutions that create real value to customers.
+
+Also, you might stumble upon different Agile frameworks and methodologies such as SCRUM, XP programming, DSDM, SCRUMBAN or many others. These Agile frameworks and methodologies have evolved in response to applying Agile values and principles in different contexts, situations, project sizes and complexity. While some methodologies are very involved with many roles and defined detailed steps, others are simple and require less explanation. You should not be concerned about learning them as each one follows the same principles in one way or another, and they have many shared practices some of which you’ve learned in the module.
+
+Different Agile Frameworks
+Finally, it is crucial to understand that adopting Agile is not a guarantee for success. It is just a means to increase the possibility of success. Even an Agile Approach comes with its challenges that you should be aware of by now. On some rare occasions, you might even find that the Waterfall might be a more sensible approach than Agile! There are no silver bullets, and your knowledge and wisdom are inevitable factors for success.
+
+Enjoy Agiling!
